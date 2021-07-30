@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- COMMON TAGS -->
     <meta charset="utf-8">
-    <title>The Last Kingdom of Kush</title>
+    <title>The Last Kingdom of Kush</title> <!-- $NAME -->
     <!-- Search Engine -->
-    <meta name="description" content="The Last Kingdom of Kush">
+    <meta name="description" content="The Last Kingdom of Kush"> <!-- $NAME -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="image" content="https://i.imgur.com/ztdvQcM.jpg">
+    <meta name="image" content="https://i.imgur.com/ztdvQcM.jpg"> <!-- $IMAGE -->
     <!-- Schema.org for Google -->
-    <meta itemprop="name" content="The Last Kingdom of Kush">
-    <meta itemprop="description" content="The Last Kingdom of Kush">
-    <meta itemprop="image" content="https://i.imgur.com/ztdvQcM.jpg">
+    <meta itemprop="name" content="The Last Kingdom of Kush"> <!-- $NAME -->
+    <meta itemprop="description" content="The Last Kingdom of Kush"> <!-- $NAME -->
+    <meta itemprop="image" content="https://i.imgur.com/ztdvQcM.jpg"> <!-- $IMAGE -->
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta name="og:title" content="The Last Kingdom of Kush">
-    <meta name="og:description" content="The Last Kingdom of Kush">
-    <meta name="og:image" content="https://i.imgur.com/ztdvQcM.jpg">
-    <meta name="og:url" content="https://hypercrowd.github.io/p/kush.html">
-    <meta name="og:site_name" content="The Last Kingdom of Kush">
+    <meta name="og:title" content="The Last Kingdom of Kush"> <!-- $NAME -->
+    <meta name="og:description" content="The Last Kingdom of Kush"> <!-- $NAME -->
+    <meta name="og:image" content="https://i.imgur.com/ztdvQcM.jpg"> <!-- $IMAGE -->
+    <meta name="og:url" content="https://hypercrowd.github.io/p/kush.html"> <!-- $BITLY_URL -->
+    <meta name="og:site_name" content="The Last Kingdom of Kush"> <!-- $NAME -->
     <meta name="og:type" content="website">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       body {
         background-color: #1b1d21;
@@ -78,6 +78,54 @@
       .subscribe {
         margin-top: 30px;
       }
+      #subscribe > div > div > iframe,
+      #mailiing_list {
+        opacity: 0;
+        transition: opacity 1s ease-in-out, height 1s ease-in-out;
+      }
+      .fa:link,
+      .fa:visited,
+      .fa:hover,
+      .fa:active {
+        text-decoration: none;
+        color: white;
+      }
+      .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 72px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+      }
+      .fa:hover {
+          opacity: 0.7;
+      }
+
+      .fa-facebook {
+        background: #3B5998;
+        color: white;
+      }
+
+      .fa-twitter {
+        background: #55ACEE;
+        color: white;
+      }
+
+      .fa-youtube {
+        background: #bb0000;
+        color: white;
+      }
+
+      .fa-instagram {
+        background: #125688;
+        color: white;
+      }
+
+      .fa-soundcloud {
+        background: #ff5500;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -85,18 +133,29 @@
     <div class="row">
       <div class="col-md-6 mx-auto">
         <div class="gumroad-product-embed">
-          <a href="https://gumroad.com/l/OioKV">
+          <a href="https://gumroad.com/l/OioKV"> <!-- $GUMROAD_URL -->
             <h3 class="text-center mt-5">
-              The Last Kingdom of Kush
+
             </h3>
           </a>
         </div>
         <div id="gumroad_cover"></div>
-        <h3 class="subscribe text-center md-3">
-          Subscribe for updates
-        </h3>
-        <div id="subscribe">
-          <div class="sender-form-field" data-sender-form-id="92df994ebd4be818vM5"></div>
+        <div id="mailiing_list">
+          <br />
+          <h3 class="subscribe text-center md-3">
+            Subscribe for more music
+          </h3>
+          <div id="subscribe">
+            <div class="sender-form-field" data-sender-form-id="623b78ba92335197et4"></div> <!-- $EMAIL_FORM_ID -->
+          </div>
+          <br />
+          <div style="text-align: center;">
+            <a href="#" target="_blank" class="fa fa-facebook"></a> <!-- $FACEBOOK_URL -->
+            <a href="#" target="_blank" class="fa fa-twitter"></a> <!-- $TWITTER_URL -->
+            <a href="#" target="_blank" class="fa fa-youtube"></a> <!-- $YOUTUBE_URL -->
+            <a href="#" target="_blank" class="fa fa-instagram"></a> <!-- $INSTAGRAM_URL -->
+            <a href="#" target="_blank" class="fa fa-soundcloud"></a> <!-- $SOUNDCLOUD_URL -->
+          </div>
         </div>
         <br />
       </div>
@@ -117,23 +176,27 @@
         a.src = d;
         m.parentNode.insertBefore(a, m)
       })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
-      sender('a47b8a970d2764')
+      sender('a47b8a970d2764') // $EMAIL_JS_ID
     </script>
     <script src="https://gumroad.com/js/gumroad-embed.js"></script>
     <script>
       var deleted = 0
       var max = 1
 
-      var clearIframeTags = setInterval(function () {
+      var clearIframeTags = setInterval(function () {  
         if ($('#subscribe > div > div > iframe').contents().find('.sender-form-link').remove().length > 0) {
           deleted += 1
         }
 
-        console.log($('#gumroad-embed-iframe-OioKV').height())
         if (deleted === max) {
           clearInterval(clearIframeTags)
         }
       }, 50)
+
+      setTimeout(function () {
+        $('#mailiing_list').css('opacity', '1')
+        $('iframe').css('opacity', '1')
+      }, 2000)
     </script>
   </body>
 </html>
