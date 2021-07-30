@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- COMMON TAGS -->
+    <meta charset="utf-8">
+    <title>The Last Kingdom of Kush</title>
+    <!-- Search Engine -->
+    <meta name="description" content="The Last Kingdom of Kush">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="image" content="https://i.imgur.com/ztdvQcM.jpg">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="The Last Kingdom of Kush">
+    <meta itemprop="description" content="The Last Kingdom of Kush">
+    <meta itemprop="image" content="https://i.imgur.com/ztdvQcM.jpg">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="The Last Kingdom of Kush">
+    <meta name="og:description" content="The Last Kingdom of Kush">
+    <meta name="og:image" content="https://i.imgur.com/ztdvQcM.jpg">
+    <meta name="og:url" content="https://hypercrowd.github.io/p/kush.html">
+    <meta name="og:site_name" content="The Last Kingdom of Kush">
+    <meta name="og:type" content="website">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+      body {
+        background-color: #1b1d21;
+        color: #f0f1f2;
+      }
+      form {
+        margin : auto !important;
+      }
+      .btn-image {
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      #subscribe {
+        margin-top: 1rem;
+        text-align: center;
+      }
+      #socialMedia {
+        margin-top: 1rem;
+        text-align: center;
+      }
+      ul {
+        padding-left: 0px;
+      }
+      ul li {
+        list-style-type:none;
+      }
+      #socialMedia > table > tbody > tr > td:nth-child(1) > ul {
+        margin-right: 1rem;
+      }
+      td {
+        text-align: left;
+        vertical-align: top;
+      }
+      table {
+        margin : auto !important;
+      }
+      .gumroad-product-embed a:link,
+      .gumroad-product-embed a:visited,
+      .gumroad-product-embed a:hover,
+      .gumroad-product-embed a:active {
+        color: #36a9ae;
+      }
+      #gumroad_cover {
+        background-color: #1b1d21;
+        height: 38px;
+        position: relative;
+        z-index: 999;
+        top: -70px;
+        margin-bottom: -86px;
+      }
+      .subscribe {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="gumroad-product-embed">
+          <a href="https://gumroad.com/l/OioKV">
+            <h3 class="text-center mt-5">
+              The Last Kingdom of Kush
+            </h3>
+          </a>
+        </div>
+        <div id="gumroad_cover"></div>
+        <h3 class="subscribe text-center md-3">
+          Subscribe for updates
+        </h3>
+        <div id="subscribe">
+          <div class="sender-form-field" data-sender-form-id="92df994ebd4be818vM5"></div>
+        </div>
+        <br />
+      </div>
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script>
+      (function (s, e, n, d, er) {
+        s['Sender'] = er;
+        s[er] = s[er] || function () {
+          (s[er].q = s[er].q || []).push(arguments)
+        }, s[er].l = 1 * new Date();
+        var a = e.createElement(n),
+            m = e.getElementsByTagName(n)[0];
+        a.async = 1;
+        a.src = d;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+      sender('a47b8a970d2764')
+    </script>
+    <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+    <script>
+      var deleted = 0
+      var max = 1
+
+      var clearIframeTags = setInterval(function () {
+        if ($('#subscribe > div > div > iframe').contents().find('.sender-form-link').remove().length > 0) {
+          deleted += 1
+        }
+
+        console.log($('#gumroad-embed-iframe-OioKV').height())
+        if (deleted === max) {
+          clearInterval(clearIframeTags)
+        }
+      }, 50)
+    </script>
+  </body>
+</html>
