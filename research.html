@@ -85,6 +85,95 @@
       .h4,h4 {
        color: #cd853f; 
       }
+      .checklist {
+        border: 1px solid #cd853f;
+        border-radius: 7px;
+        padding: 1em;
+        display: none;
+      }
+      .visible {
+        display: block;
+      }
+      .hidden {
+        display: none;
+      }
+      .checky {
+        float: left;
+        margin-right: 10px;
+        margin-top: 3px;
+      }
+      .texty {
+        bottom: 5px;
+      }
+      li, #discordButton {
+        margin-bottom: 1em;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+      }
+      input[type="checkbox"] {
+        /* Add if not using autoprefixer */
+        -webkit-appearance: none;
+        /* Remove most all native input styles */
+        appearance: none;
+        /* For iOS < 15 */
+        background-color: var(--form-background);
+        /* Not removed via appearance */
+        margin: 0;
+
+        font: inherit;
+        color: currentColor;
+        width: 1.15em;
+        height: 1.15em;
+        border: 0.15em solid currentColor;
+        border-radius: 0.15em;
+        transform: translateY(-0.075em);
+
+        display: grid;
+        place-content: center;
+      }
+
+      input[type="checkbox"]::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        transform: scale(0);
+        transform-origin: bottom left;
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em var(--form-control-color);
+        /* Windows High Contrast Mode */
+        background-color: #deb887;
+      }
+
+      input[type="checkbox"]:checked::before {
+        transform: scale(1);
+      }
+
+      input[type="checkbox"]:focus {
+        outline: max(2px, 0.15em) solid currentColor;
+        outline-offset: max(2px, 0.15em);
+      }
+
+      input[type="checkbox"]:disabled {
+        --form-control-color: var(--form-control-disabled);
+
+        color: var(--form-control-disabled);
+        cursor: not-allowed;
+      }
+
+      @-webkit-keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+      }
+     
+      @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+      }
     </style>
     <style>
       #telegram {
@@ -222,8 +311,8 @@
         </a>
         <a
           target="_blank"
-          href="https://rebrand.ly/0fdd05"
           class="btn btn-dark btn-block btn-image mt-4 mb-4 mx-auto"
+          onclick="document.getElementById('discordChecklist').classList.add('visible');"
           id="discord"
           role="button"
         >
@@ -232,6 +321,45 @@
             Join the research community to get help, assistance, and support for research efforts. <b>(Good for 10 invites only!)</b>
           </small>
         </a>
+        <div id="discordChecklist" class="mt-4 mb-4 mx-auto checklist">
+          The Discord server provides training, challenges, support, and tools designed to help you become a better researcher/investigator.  <b>Please check each of the boxes below to show that you acknowledge the ground rules</b>:
+          <br /><br />
+          <ul>
+            <li id="discord1">
+              <span class="checky"><input type="checkbox" onclick="document.getElementById('discord2').classList = [];"></span>
+              <span class="texty">Everyone in this community is a volunteer, so be kind.  If you aren't kind, you'll end up in the PvP part of the server where the only way out is to post funny memes until enough people like you again.</span>
+            </li>
+            <li id="discord2" class="hidden">
+              <span class="checky"><input type="checkbox" onclick="document.getElementById('discord3').classList = [];"></span>
+              <span class="texty">The server has Deputies and are ready and eager to assist you with any question you have.</span>
+            </li>
+            <li id="discord3" class="hidden">
+              <span class="checky"><input type="checkbox" onclick="document.getElementById('discord4').classList = [];"></span>
+              <span class="texty">We do routine events like gaming and research competitions, so join in on the fun!</span>
+            </li>
+            <li id="discord4" class="hidden">
+              <span class="checky"><input type="checkbox" onclick="document.getElementById('discord5').classList = [];"></span>
+              <span class="texty">For anything you need to find, there is a tool.  If you cannot find the tool, ask for help.</span>
+            </li>
+            <li id="discord5" class="hidden">
+              <span class="checky"><input type="checkbox" onclick="document.getElementById('discordButton').classList = [];" class=""></span>
+              <span class="texty">The person running the CultState account goes by the name "HyperCrowd".  Drop him a message for funsies.</span>
+            </li>
+          </ul>
+
+          <div id="discordButton" class="hidden">
+            <a
+              target="_blank"
+              href="https://rebrand.ly/ox1sa5g"
+              class="btn btn-warning btn-block btn-image mt-4 mb-4"
+              role="button"
+            >
+              <h5>
+                Join Discord!
+              </h5>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">
