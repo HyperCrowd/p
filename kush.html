@@ -79,7 +79,7 @@
         margin-top: 30px;
       }
       #subscribe > div > div > iframe,
-      #mailiing_list {
+      #mailiing_list, #preview {
         opacity: 0;
         transition: opacity 1s ease-in-out, height 1s ease-in-out;
       }
@@ -147,6 +147,12 @@
           </a>
         </div>
         <div id="gumroad_cover"></div>
+        <div id="preview">
+          <h3 class="subscribe text-center md-3">
+            Try Before You Buy
+          </h3>
+          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/219529407&color=%23ff90e8&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
+        </div>
         <div id="mailiing_list">
           <br />
           <h3 class="subscribe text-center md-3">
@@ -203,6 +209,7 @@
 
       setTimeout(function () {
         $('#mailiing_list').css('opacity', '1')
+        $('#preview').css('opacity', '1')
         $('iframe').css('opacity', '1')
       }, 2000)
     </script>
